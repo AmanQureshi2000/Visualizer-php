@@ -607,7 +607,7 @@ footer {
             <div class="stat-label">Swaps</div>
         </div>
         <div class="stat">
-            <div class="stat-value" id="time">0ms</div>
+            <div class="stat-value" id="time">0s</div>
             <div class="stat-label">Time</div>
         </div>
     </div>
@@ -811,8 +811,8 @@ function updateStats() {
     swapsElem.textContent = swaps;
     
     if (startTime > 0) {
-        const elapsed = performance.now() - startTime;
-        timeElem.textContent = `${Math.round(elapsed)}ms`;
+        const elapsed = (performance.now() - startTime)/1000;
+        timeElem.textContent = `${Math.round(elapsed)}s`;
     }
 }
 
