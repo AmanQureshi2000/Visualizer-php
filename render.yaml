@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sorting-visualizer
+    env: docker
+    docker:
+      dockerfile: Dockerfile
+    port: 80
+    envVars:
+      - key: PHP_ENV
+        value: production
